@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap');
+
+body {
+    background: black;
+    color: white;
+    transition: 0.2s;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 그룹 전체를 화면 중앙으로 */
+    text-align: center; /* 내부 텍스트들을 가로 중앙 정렬 */
+}
+
+h1 {
+    font-family: "Noto Serif JP", sans-serif;
+    font-weight: 900;
+    font-size: 15rem;
+    margin: 0;
+    line-height: 1;
+
+    /* --- 추가 및 수정 --- */
+    min-width: 1em;    /* 글자 한 개 크기만큼 최소 너비 확보 */
+    height: 1em;       /* 높이 고정으로 위아래 들썩임 방지 */
+    display: flex;     /* 중앙 정렬을 위한 설정 */
+    justify-content: center;
+    align-items: center;
+    font-variant-numeric: tabular-nums; /* 숫자나 기호 발생 시 폭 고정 */
+    text-rendering: optimizeLegibility; /* 텍스트 렌더링 최적화 */
+}
+
+span {
+    font-family: "Noto Serif JP", sans-serif;
+    font-weight: 400;
+    display: block; /* 줄바꿈을 위해 블록 요소로 변경 */
+    margin-top: 20px; /* h1과의 간격 조정 */
+    color: #888888; /* 회색 지정 */
+    font-size: 1.5rem; /* 적절한 크기 설정 */
+    transition: 1s;
+
+    transition: opacity 1s, transform 1s; 
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-out {
+    opacity: 0;
+    transform: translateY(20px); /* 아래로 20px 이동 */
+    pointer-events: none; /* 사라지는 중 클릭 방지 */
+}
