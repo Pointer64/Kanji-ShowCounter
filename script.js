@@ -8,16 +8,16 @@ let printCount = 0;
 let originalData = []; // 원본 데이터를 따로 보관할 변수
 let shuffledKanji = [];
 
-// 1. 낮/밤 테마 설정
-const today = new Date();
-const hour = today.getHours();
-if (hour >= 8 && hour <= 18) {
-    document.body.style.background = "white";
-    document.body.style.color = "black";
-} else {
-    document.body.style.background = "black";
-    document.body.style.color = "white";
-}
+// // 1. 낮/밤 테마 설정
+// const today = new Date();
+// const hour = today.getHours();
+// if (hour >= 8 && hour <= 18) {
+//     document.body.style.background = "white";
+//     document.body.style.color = "black";
+// } else {
+//     document.body.style.background = "black";
+//     document.body.style.color = "white";
+// }
 
 sub.style.cssText = "transition: 0.5s !important;";
 
